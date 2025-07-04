@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: file-service-config
+data:
+  MINIO_ENDPOINT: {{ .Values.minio.endpoint | quote }}
+  MINIO_PORT: "{{ .Values.minio.port }}"
+  MINIO_BUCKET: {{ .Values.minio.bucket | quote }}
+  RABBITMQ_URI: {{ .Values.rabbitmq.uri | quote }}
+  QUEUE_NAME: {{ .Values.rabbitmq.queue | quote }}

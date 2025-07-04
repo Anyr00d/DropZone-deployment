@@ -1,0 +1,8 @@
+# Docker image config
+image:
+  repository: anyr00d/audit-service
+  tag: latest
+
+# Service config
+service:
+  port: 3000

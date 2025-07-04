@@ -1,0 +1,5 @@
+apiVersion: v2
+name: file-service
+version: 0.1.0
+description: Helm chart for the DropZone file-service
+type: application

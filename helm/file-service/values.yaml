@@ -1,0 +1,16 @@
+minio:
+  endpoint: minio # DNS name of the minio service inside the cluster
+  port: 9000
+  bucket: dropzone
+
+rabbitmq:
+  queue: audit.logs
+
+image:
+  repository: anyr00d/file-service
+  tag: latest
+
+service:
+  port: 50051
+
+resources: {}
