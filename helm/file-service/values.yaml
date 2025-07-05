@@ -8,7 +8,7 @@ rabbitmq:
 
 image:
   repository: anyr00d/file-service
-  tag: latest
+  tag: "98b3dff"
 
 service:
   port: 50051
