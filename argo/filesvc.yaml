@@ -9,9 +9,6 @@ spec:
     repoURL: https://github.com/Anyr00d/DropZone-deployment.git
     targetRevision: HEAD
     path: helm/file-service
-    helm:
-      valueFiles:
-        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
@@ -19,5 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
