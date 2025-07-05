@@ -17,12 +17,17 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: {{ .Values.service.port }}
-          env:
-            - name: RABBITMQ_URI
-              value: "{{ .Values.rabbitmq.uri }}"
-            - name: HMAC_SECRET
-              value: "{{ .Values.hmac.secret }}"
-            - name: MONGODB_URI
-              value: "{{ .Values.mongodb.uri }}"
-            - name: QUEUE_NAME
-              value: "{{ .Values.rabbitmq.queue}}"
+          envFrom:
+            - configMapRef:
+                name: audit-service-config
+            - secretRef:
+                name: audit-service-secrets
+          # env:
+          #   - name: RABBITMQ_URI
+          #     value: "{{ .Values.rabbitmq.uri }}"
+          #   - name: HMAC_SECRET
+          #     value: "{{ .Values.hmac.secret }}"
+          #   - name: MONGODB_URI
+          #     value: "{{ .Values.mongodb.uri }}"
+          #   - name: QUEUE_NAME
+          #     value: "{{ .Values.rabbitmq.queue}}"
