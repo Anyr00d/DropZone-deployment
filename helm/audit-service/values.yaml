@@ -1,7 +1,7 @@
 # Docker image config
 image:
   repository: anyr00d/audit-service
-  tag: "8404a9f"
+  tag: "20a12ac"
 
 # Service config
 service:
