@@ -6,6 +6,10 @@ spec:
   selector:
     app: file-service
   ports:
-    - port: 50051
-      targetPort: 50051
+    - name: grpc
+      port: {{.Values.service.port}}
+      targetPort: {{.Values.service.port}}
       protocol: TCP
+    - name: http
+      port: {{ .Values.service.healthPort }}
+      targetPort: {{ .Values.service.healthPort }}

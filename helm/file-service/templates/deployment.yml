@@ -18,7 +18,7 @@ spec:
         - name: file-service
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
-            - containerPort: 50051
+            - containerPort: {{.Values.service.port}}
             - containerPort: {{.Values.service.healthPort}}
           livenessProbe:
             httpGet:
