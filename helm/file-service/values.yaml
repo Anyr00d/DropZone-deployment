@@ -1,6 +1,6 @@
 image:
   repository: anyr00d/file-service
-  tag: "62d3294"
+  tag: "a13d0fe"
 
 service:
   port: 50051
