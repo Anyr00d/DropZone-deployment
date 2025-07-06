@@ -4,5 +4,6 @@ image:
 
 service:
   port: 50051
+  healthPort: 3000
 
 resources: {}
