@@ -22,14 +22,14 @@ spec:
             - containerPort: {{.Values.service.healthPort}}
           livenessProbe:
             httpGet:
-            path: /healthz
-            port: {{ .Values.healthPort }}
+              path: /healthz
+              port: {{ .Values.service.healthPort }}
             initialDelaySeconds: 5
             periodSeconds: 10
           readinessProbe:
             httpGet:
-            path: /healthz
-            port: {{ .Values.healthPort }}
+              path: /healthz
+              port: {{ .Values.service.healthPort }}
             initialDelaySeconds: 2
             periodSeconds: 5
           envFrom:
