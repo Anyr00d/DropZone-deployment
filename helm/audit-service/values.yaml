@@ -6,3 +6,4 @@ image:
 # Service config
 service:
   port: 3000
+  healthPort: 3002
