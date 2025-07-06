@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: file-service-monitor
+  labels:
+    release: prom-stack
+spec:
+  selector:
+    matchLabels:
+      app: file-service
+  namespaceSelector:
+    matchNames:
+      - default
+  endpoints:
+    - port: health
+      path: /metrics
+      interval: 15s
